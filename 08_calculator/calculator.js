@@ -29,14 +29,31 @@ const power = function(a, b) {
 };
 
 
+// 5! = 5 * 4! = 5 * 4 * 3 * 2 * 1 
+// 
 
-const factorial = function() {
-	
+const factorial = function(n) {
+  if (n === 0) return 1;
+  let factored = 1;
+  for (i = n; i > 0; i--) {    
+    factored *= i;            // can also be written as factored = factored * i;
+  }
+  return factored;
 };
 
 
-// npm test calculator.spec.js
+// const factorial = function (n) {
+//   if (n === 0) return 1;
+//   let product = 1;
+//   for (let i = n; i > 0; i--) {
+//     product *= i;
+//   }
+//   return product;
+// };
 
+
+
+// npm test calculator.spec.js
 // Do not edit below this line
 module.exports = {
   add,
